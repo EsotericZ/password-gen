@@ -1,14 +1,22 @@
 var generateBtn = document.querySelector("#generate");
 
-  // var password = generatePassword();
-  // var passwordText = document.querySelector("#password");
-
-  // passwordText.value = password; 
-
 // Write password to the #password input
 function writePassword() {
-  
-  let length = prompt("Length of Password \nMust be between 8 and 128");
+
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+  console.log('password', password)
+  console.log('passwordText', passwordText)
+
+  passwordText.value = password; 
+}
+
+function generatePassword() {
+
+  let length = (function ask() {
+    let n = prompt('Length of Password (Must be from 8 to 128):');
+    return isNaN(n) || +n > 128 || +n < 8 ? ask() : n;
+  }());
   let lower = confirm("Lowercase Required? \nOK for Yes / Cancel for No");
   let upper = confirm("Uppercase Required? \nOK for Yes / Cancel for No");
   let numeric = confirm("Numeric Values Required? \nOK for Yes / Cancel for No");
@@ -19,9 +27,6 @@ function writePassword() {
   console.log(upper);
   console.log(numeric);
   console.log(special);
-
-
-
   console.log('Button Pressed');
 
   let n = 0;
@@ -112,8 +117,7 @@ function writePassword() {
   let final = combine.split('').sort(function(){return 0.5-Math.random()}).join('');
   console.log(final)
 
-
-
+  return final;
 }
 
 // Add event listener to generate button
