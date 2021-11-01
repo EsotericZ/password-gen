@@ -4,15 +4,24 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
-/*   var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+  
+  let length = prompt("Length of Password \nMust be between 8 and 128");
+  let lower = confirm("Lowercase Required? \nOK for Yes / Cancel for No");
+  let upper = confirm("Uppercase Required? \nOK for Yes / Cancel for No");
+  let numeric = confirm("Numeric Values Required? \nOK for Yes / Cancel for No");
+  let special = confirm("Special Characters Required? \nOK for Yes / Cancel for No");
 
-  passwordText.value = password; */
-  let length = document.getElementById("length").value
-  let lower = document.getElementById("lowercase").checked
-  let upper = document.getElementById("uppercase").checked
-  let numeric = document.getElementById("numeric").checked
-  let special = document.getElementById("special").checked
+  console.log(length);
+  console.log(lower);
+  console.log(upper);
+  console.log(numeric);
+  console.log(special);
+
+  // var password = generatePassword();
+  // var passwordText = document.querySelector("#password");
+
+  // passwordText.value = password; 
+
   console.log('Button Pressed');
 
   let n = 0;
