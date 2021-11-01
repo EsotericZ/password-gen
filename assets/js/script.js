@@ -1,6 +1,9 @@
-// Assignment Code
-
 var generateBtn = document.querySelector("#generate");
+
+  // var password = generatePassword();
+  // var passwordText = document.querySelector("#password");
+
+  // passwordText.value = password; 
 
 // Write password to the #password input
 function writePassword() {
@@ -17,10 +20,7 @@ function writePassword() {
   console.log(numeric);
   console.log(special);
 
-  // var password = generatePassword();
-  // var passwordText = document.querySelector("#password");
 
-  // passwordText.value = password; 
 
   console.log('Button Pressed');
 
@@ -109,8 +109,11 @@ function writePassword() {
   let combine = lcharn.concat(ucharn, ncharn, scharn, remn);
   console.log(combine)
 
-  var final = combine.split('').sort(function(){return 0.5-Math.random()}).join('');
+  let final = combine.split('').sort(function(){return 0.5-Math.random()}).join('');
   console.log(final)
+
+
+
 }
 
 // Add event listener to generate button
