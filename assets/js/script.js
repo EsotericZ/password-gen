@@ -1,16 +1,15 @@
 var generateBtn = document.querySelector("#generate");
 
-// Write password to the #password input
+// FILL IN #password INPUT WITH THE PASSWORD CREATED IN generatePassword 
 function writePassword() {
 
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-  console.log('password', password)
-  console.log('passwordText', passwordText)
 
   passwordText.value = password; 
 }
 
+// GENERATE PASSWORD
 function generatePassword() {
 
   // JAVASCRIPT PROMPTS FOR USER INPUT
@@ -52,6 +51,9 @@ function generatePassword() {
     schar = " !#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
     rchar = rchar.concat(schar)
     n++
+  }
+  if (n === 0) {
+    alert('You must select at least one of the options')
   }
 
   // HOW MANY OF EACH TYPE TO ADD - HOW MANY LEFT OVER
