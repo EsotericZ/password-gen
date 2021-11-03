@@ -1,4 +1,5 @@
 var generateBtn = document.querySelector("#generate");
+let globalpass = ""
 
 // FILL IN #password INPUT WITH THE PASSWORD CREATED IN generatePassword 
 function writePassword() {
@@ -7,6 +8,9 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password; 
+  globalpass = passwordText.value;
+
+  return globalpass;
 }
 
 // GENERATE PASSWORD
@@ -105,3 +109,14 @@ function generatePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+// COPY THE PASSWORD TO THE CLIPBOARD
+function copyPassword() {
+
+  navigator.clipboard.writeText(globalpass);
+  if (globalpass === "") {
+    alert("You Must Generate a Password First")
+  } else {
+    alert(`Copied The Password: \n${globalpass} \nTo The Clipboard`);
+  }
+}
