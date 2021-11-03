@@ -5,7 +5,10 @@ Homework Assaignment Week 03
 
 # Final Version
 
+![Alt text](/assets/images/screenshot.png?raw=true "HW Week 03 Screenshot")
+
 # Changes Made To File
-Changed file structure to industry standard - added css and js folders to assets folders - moved style.css and script.js files into the corresponding directories. Fixed the links on index.html
+Added code to the js file to generate a randomized password from user selected options. Created a second button to copy the password to the clipboard. Updated css on second button for different screen sizes.
 
 # Collaboration
+Kirtley Adams, Erna Lukac
