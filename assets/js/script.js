@@ -17,6 +17,7 @@ function writePassword() {
 function generatePassword() {
 
   // JAVASCRIPT PROMPTS FOR USER INPUT
+  // LENGTH CODE - AFTER PROMPT CHECK THAT n IS A NUMBER WITHIN RANGE BEFORE MOVING ON
   let length = (function ask() {
     let n = prompt('Length of Password (Must be from 8 to 128):');
     return isNaN(n) || +n > 128 || +n < 8 ? ask() : n;
@@ -51,7 +52,6 @@ function generatePassword() {
     n++
   }
   if (special === true) {
-    /* NEDD TO ADD " CHARACTER */
     schar = " !#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
     rchar = rchar.concat(schar)
     n++
@@ -117,6 +117,6 @@ function copyPassword() {
   if (globalpass === "") {
     alert("You Must Generate a Password First")
   } else {
-    alert(`Copied The Password: \n${globalpass} \nTo The Clipboard`);
+    alert(`Copied The Password: \n\n${globalpass} \n\nTo The Clipboard`);
   }
 }
