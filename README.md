@@ -5,7 +5,7 @@ Homework Assaignment Week 03
 Using starter code create an application that will generate a random password based on user selected criteria. The criteria includes lowercase, uppercase, numeric values and special characters. The password is between 8 and 128 characters long. 
 
 # Final Version
-https://esotericz.github.io/hw-week03/
+https://esotericz.github.io/password-gen/
 
 ![Alt text](/assets/images/screenshot.png?raw=true "HW Week 03 Screenshot")
 
